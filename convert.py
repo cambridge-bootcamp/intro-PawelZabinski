@@ -3,9 +3,7 @@ import sys
 def convert_to_binary(number):
     # Convert the integer to a binary string e,g, 20 should give '10100'
 
-    # To do
-    
-    return '000'
+    return bin(number)
     
 
 def main():
