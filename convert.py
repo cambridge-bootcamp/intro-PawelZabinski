@@ -1,9 +1,9 @@
 import sys
 
-def convert_to_binary(number):
+def convert_to_binary(number: int) -> str:
     # Convert the integer to a binary string e,g, 20 should give '10100'
 
-    result = ""
+    result: str = ""
 
     while number > 0:
         result += str(number % 2)
@@ -12,7 +12,7 @@ def convert_to_binary(number):
     return result[::-1]
     
 
-def main():
+def main() -> None:
     """
     Main function to handle command-line arguments and run the conversion.
     """
@@ -24,14 +24,14 @@ def main():
         # Exit the script with a status code of 1 to indicate an error
         sys.exit(1)
         
-    input_arg = sys.argv[1]
+    input_arg: str = sys.argv[1]
     try:
-        number = int(input_arg)
+        number: int = int(input_arg)
     except ValueError:
         print(f"Please supply a valid integer as input")
         exit(-1)
           
-    binary_representation = convert_to_binary(number)
+    binary_representation: str = convert_to_binary(number)
 
     print(f"The binary representation of {input_arg} is: {binary_representation}")
 
