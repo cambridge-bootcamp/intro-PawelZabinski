@@ -1,13 +1,13 @@
 import sys
 
-def convert_to_binary(number):
+def convert_to_ternary(number):
     # Convert the integer to a binary string e,g, 20 should give '10100'
 
     result = ""
 
     while number > 0:
-        result += str(number % 2)
-        number //= 2
+        result += str(number % 3)
+        number //= 3
     
     return result[::-1]
     
@@ -31,9 +31,9 @@ def main():
         print(f"Please supply a valid integer as input")
         exit(-1)
           
-    binary_representation = convert_to_binary(number)
+    binary_representation = convert_to_ternary(number)
 
-    print(f"The binary representation of {input_arg} is: {binary_representation}")
+    print(f"The ternary representation of {input_arg} is: {binary_representation}")
 
 if __name__ == "__main__":
     main()
